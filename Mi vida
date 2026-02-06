@@ -1,0 +1,182 @@
+<para_mi_princesa.html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aquí estoy contigo 💖</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #fbd3e9, #bb377d);
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #bb377d;
+    }
+
+    p.description {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .options label {
+      font-weight: normal;
+      display: block;
+      margin-top: 6px;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background: #bb377d;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #a02f68;
+    }
+
+    .mensaje-final {
+      display: none;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 18px;
+      color: #bb377d;
+      font-weight: bold;
+    }
+
+    /* Corazones */
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: rgba(255,255,255,0.8);
+      font-size: 20px;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Aquí estoy contigo 💖</h1>
+
+  <p class="description">
+    Este no es un cuestionario.  
+    Es mi forma de estar contigo,  
+    incluso cuando no puedo abrazarte.
+  </p>
+
+  <label>1. Cuando piensas en mí, ¿en qué momento sientes que estoy más cerca de ti?</label>
+  <textarea rows="3"></textarea>
+
+  <label>2. ¿Qué gesto, palabra o detalle mío te hace sentir amada de verdad?</label>
+  <textarea rows="3"></textarea>
+
+  <label>3. Si ahora mismo estuviera a tu lado, ¿qué crees que estaría haciendo contigo?</label>
+  <div class="options">
+    <label><input type="radio" name="q3"> Abrazándote en silencio</label>
+    <label><input type="radio" name="q3"> Escuchándote con atención</label>
+    <label><input type="radio" name="q3"> Haciéndote reír</label>
+    <label><input type="radio" name="q3"> Todo eso, sin apuro</label>
+  </div>
+
+  <label>4. ¿Qué parte de nuestro amor te da más tranquilidad al corazón?</label>
+  <textarea rows="3"></textarea>
+
+  <label>5. Cuando dudas o tienes miedo, ¿qué te gustaría que yo te recordara?</label>
+  <textarea rows="3"></textarea>
+
+  <label>6. Completa la frase: “A tu lado me siento ____________.”</label>
+  <input type="text">
+
+  <label>7. ¿En qué momento te has sentido más acompañada por mí, incluso a la distancia?</label>
+  <textarea rows="3"></textarea>
+
+  <label>8. ¿Qué te gustaría que sigamos construyendo juntos?</label>
+  <div class="options">
+    <label><input type="checkbox"> Confianza</label>
+    <label><input type="checkbox"> Sueños</label>
+    <label><input type="checkbox"> Momentos</label>
+    <label><input type="checkbox"> Un futuro compartido</label>
+    <label><input type="checkbox"> Crecer juntos</label>
+  </div>
+
+  <label>9. Si nuestro amor fuera un lugar, ¿cómo sería ese lugar para ti?</label>
+  <textarea rows="3"></textarea>
+
+  <label>10. Completa la frase final: “Quiero seguir a tu lado porque ____________.”</label>
+  <textarea rows="3"></textarea>
+
+  <button onclick="mostrarMensaje()">Enviar con el corazón 💌</button>
+
+  <div class="mensaje-final" id="mensaje">
+    Gracias por abrir tu corazón 🤍<br>
+    Yo te elijo, me quedo contigo y quiero seguir a tu lado.
+  </div>
+</div>
+
+<script>
+  function mostrarMensaje() {
+    document.getElementById("mensaje").style.display = "block";
+  }
+
+  function crearCorazon() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  setInterval(crearCorazon, 500);
+</script>
+
+</body>
+</html>
