@@ -3,74 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <title>Para Francisca 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      color: #5a1a2b;
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1b2735, #090a0f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
     }
-    h1 { font-size: 2.3em; }
-    .card {
+
+    /* ESTRELLAS */
+    .estrellas {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .estrella {
+      position: absolute;
       background: white;
+      border-radius: 50%;
+      animation: brillar 3s infinite ease-in-out;
+    }
+
+    @keyframes brillar {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    /* CONTENEDOR */
+    .contenedor {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* CARTA */
+    .carta {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 720px;
+      padding: 40px;
       border-radius: 20px;
-      padding: 25px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+      animation: aparecer 2s ease;
+      color: #333;
     }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #b23a48;
+      margin-bottom: 5px;
     }
-    textarea {
-      width: 90%;
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-      margin-top: 5px;
+
+    h2 {
+      text-align: center;
+      font-weight: 300;
+      margin-top: 0;
+      color: #777;
     }
-    button {
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .firma {
+      margin-top: 30px;
+      text-align: right;
+      font-weight: 500;
+    }
+
+    .corazon {
+      text-align: center;
+      font-size: 32px;
       margin-top: 20px;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 20px;
-      background: #ff4d6d;
-      color: white;
-      font-size: 1em;
+      animation: latido 1.5s infinite;
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* SPOTIFY */
+    .musica {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>Francisca, mi amor 💕</h1>
-    <p>
-      Hice esto para que, aunque no esté a tu lado ahora,  
-      sientas que mi corazón siempre camina contigo.
-    </p>
+  <!-- ESTRELLAS -->
+  <div class="estrellas" id="estrellas"></div>
 
-    <label>💖 ¿Qué es lo que más amas de nosotros?</label>
-    <textarea placeholder="Escribe aquí…"></textarea>
+  <div class="contenedor">
 
-    <label>🌹 ¿Qué recuerdo nuestro te hace sonreír siempre?</label>
-    <textarea placeholder="Ese momento especial…"></textarea>
+    <!-- CARTA -->
+    <div class="carta">
+      <h1>Para Francisca Soledad Gallardo Reyes</h1>
+      <h2>Una carta desde la distancia</h2>
 
-    <label>💌 ¿Qué sientes cuando piensas en mí?</label>
-    <textarea placeholder="Dímelo con el corazón…"></textarea>
+      <p>Amor mío,</p>
 
-    <label>✨ ¿Qué sueñas para nuestro futuro juntos?</label>
-    <textarea placeholder="Nuestro mañana…"></textarea>
+      <p>
+        No sé en qué momento exacto pasó, pero un día te convertiste en ese pensamiento
+        que me acompaña al despertar y en el último que aparece antes de dormir.
+        Aunque la distancia intente hacerse notar, jamás ha sido capaz de borrar lo que siento por ti.
+        Al contrario, solo ha hecho que te elija con más fuerza.
+      </p>
 
-    <button>Siempre contigo 💞</button>
+      <p>
+        Extrañarte no es fácil. Hay días en los que quisiera acortar los kilómetros con solo decir tu nombre,
+        abrazarte cuando más lo necesito y sentir que todo está bien.
+        Pero incluso desde lejos, sigues siendo mi refugio, mi calma y mi certeza.
+      </p>
 
-    <p style="margin-top:20px;">
-      Te elijo hoy, mañana y cada día.  
-      Gracias por quedarte a mi lado 🤍
-    </p>
+      <p>
+        Francisca Soledad Gallardo Reyes, quiero que sepas que estoy aquí.
+        Que no me he ido, que no me voy y que no pienso rendirme.
+        La distancia no define lo nuestro; lo define el amor,
+        la paciencia y las ganas inmensas que tengo de seguir caminando contigo.
+      </p>
+
+      <p>
+        Te pienso en los detalles pequeños, en las canciones, en los silencios.
+        Te llevo conmigo en todo momento.
+        Y aunque hoy no pueda tomarte la mano,
+        mi corazón sigue siendo tuyo,
+        firme, leal y esperando el día en que el “lejos” se convierta en “aquí”.
+      </p>
+
+      <p>
+        Gracias por existir, por quedarte, por elegirnos incluso cuando no es fácil.
+        Te amo más de lo que las palabras alcanzan a decir.
+      </p>
+
+      <div class="firma">
+        Con todo mi amor,<br>
+        <strong>[Tu nombre]</strong>
+      </div>
+
+      <div class="corazon">❤️</div>
+    </div>
+
+    <!-- MÚSICA -->
+    <div class="musica">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/0z9Yk0n2WZp2cC8d7jXw9z?utm_source=generator"
+        width="100%" height="152"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+
   </div>
+
+  <script>
+    const contenedor = document.getElementById("estrellas");
+
+    for (let i = 0; i < 80; i++) {
+      const estrella = document.createElement("div");
+      estrella.className = "estrella";
+      const size = Math.random() * 2 + 1;
+      estrella.style.width = size + "px";
+      estrella.style.height = size + "px";
+      estrella.style.top = Math.random() * 100 + "%";
+      estrella.style.left = Math.random() * 100 + "%";
+      estrella.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      contenedor.appendChild(estrella);
+    }
+  </script>
 
 </body>
 </html>
+ 
